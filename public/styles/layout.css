@@ -22,11 +22,12 @@ body {
 }
 
 .container {
-   width: 450px;
-   margin: auto;
-   background-color: white;
-   position: relative;
-   top: 100px;
+  width: 450px;
+  margin: auto;
+  background-color: white;
+  position: relative;
+  top: 83px;
+  height: 600px;
 }
 
 /*

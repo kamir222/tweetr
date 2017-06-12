@@ -1,0 +1,45 @@
+.new-tweet {
+  border: 1px solid #d2cece;
+  border-radius: 5px;
+  background-color: #eee;
+  width: 384px;
+  margin: 2em;
+  position: absolute;
+}
+
+.new-tweet h2 {
+  border-bottom: 1px solid black;
+  width: 361px;
+  margin: auto;
+  margin-bottom: 18px;
+  margin-top: 9px;
+}
+form {
+  width: 361px;
+  margin: auto;
+}
+
+form textarea {
+  display: block;
+  width: 100%;
+}
+
+textarea[placeholder] {
+  padding: 4px;
+}
+
+input[value='Tweet'] {
+  border: 1px solid #d2cece;
+  margin-top: 5px;
+  margin-bottom: 9px;
+  background-color: white;
+}
+
+form .counter {
+  float: right;
+  font-size: 11px;
+  font-style: italic;
+  margin-top: 5px;
+  padding-right: 6px;
+  padding-top: 8px;
+}
