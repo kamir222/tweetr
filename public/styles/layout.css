@@ -21,6 +21,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.container {
+ width: 450px;
+ margin: auto;
+ background-color: white;
+ position: relative;
+ top: 100px;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
