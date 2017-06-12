@@ -1,17 +1,18 @@
-"use strict";
+"use strict"; // makes sure that variables are declared
 
 // Basic express setup:
 
 const PORT          = 8080;
 const express       = require("express");
-const bodyParser    = require("body-parser");
-const app           = express();
+const bodyParser    = require("body-parser"); //middlewear takes data and converts it to javascript Object, so it's easier to work with
+const app           = express(); //for easier user
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true })); //using the qs library in the body parser
+app.use(express.static("public")); // looks up things in the public file
 
 // The in-memory database of tweets. It's a basic object with an array in it.
 const db = require("./lib/in-memory-db");
+
 
 // The `data-helpers` module provides an interface to the database of tweets.
 // This simple interface layer has a big benefit: we could switch out the
