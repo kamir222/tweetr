@@ -1,15 +1,17 @@
 "use strict";
+
 $(document).ready(function () {
 
   //counter
-  $('textarea').on('keyup', function () {
+  $('textarea').on('keyup keypress', function () {
     let textLength = $(this).val().length;
-    $('.counter').text(140 - textLength);
+    $(this).parent('form').children('.counter').text(140 - textLength);
 
     if (textLength > 140)
-      $('.counter').css('color', 'red');
+      $(this).parent('form').children('.counter').css('color', 'red');
     else
-      $('.counter').css('color', 'black');
+      $(this).parent('form').children('.counter').css('color', 'black');
   });
+
 
 });
