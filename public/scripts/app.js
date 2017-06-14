@@ -96,7 +96,6 @@ function loadTweets () {
     url: '/tweets',
     method: 'GET',
     success: function (response) {
-      console.log('Success: ', response);
       renderTweets(response.reverse());
     }
   });
@@ -111,12 +110,23 @@ $(document).ready(function () {
     let formArray = $(this).serializeArray().reverse();
     let formObject = objectifyForm(formArray);
 
-    //post request to the server
-    $.ajax({
-        url: '/tweets/',
-        method: 'POST',
-        data: formObject
-      }).then(loadTweets);
+    if ($('textarea').val() === ""   ||
+        $('textarea').val() === null) {
+        alert('you have not entered anything, buddy!');
+
+    } else if ($('textarea').val().length > 140) {
+      alert('you\'ve exceeded character count!');
+    } else {
+      $('textarea').val('');
+      //post request to the server
+      $.ajax({
+          url: '/tweets/',
+          method: 'POST',
+          data: formObject
+        }).then(loadTweets);
+    }
+
+
 
   });
 
