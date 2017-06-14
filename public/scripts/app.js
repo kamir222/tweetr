@@ -116,9 +116,7 @@ $(document).ready(function () {
         url: '/tweets/',
         method: 'POST',
         data: formObject
-      });
-
-    loadTweets();
+      }).then(loadTweets);
 
   });
 
