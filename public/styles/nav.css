@@ -18,6 +18,21 @@
   float: left;
 }
 
+#nav-bar .composeBtn {
+  float: right;
+  margin-top: 10px;
+  width: 111px;
+  height: 61px;
+  border-radius: 5px;
+  border: 1px solid black;
+  opacity: 0.7;
+  background-color: white;
+  cursor: pointer;
+}
+#nav-bar .composeBtn:hover {
+  opacity: 1;
+}
+
 #nav-bar .header {
   font-size: 2em;
   line-height: 99px;

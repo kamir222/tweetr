@@ -103,6 +103,13 @@ function loadTweets () {
 
 $(document).ready(function () {
 
+  $(".composeBtn").on('click', function () {
+
+  $(".new-tweet").toggle( "slow", function() {
+     $( "textarea" ).focus();
+  });
+});
+
 
   $(".new-tweet form").on('submit', function (event) {
     event.preventDefault();
@@ -125,8 +132,6 @@ $(document).ready(function () {
           data: formObject
         }).then(loadTweets);
     }
-
-
 
   });
 
