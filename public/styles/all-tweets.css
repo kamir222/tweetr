@@ -1,0 +1,72 @@
+.all-tweets {
+  position: absolute;
+  top: 150px;
+}
+
+.tweet-article:hover {
+  opacity: 1;
+}
+
+
+.tweet-article .content {
+  height: 71px;
+  position: relative;
+
+}
+
+.tweet-article {
+  border: 1px solid #d2cece;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  background-color: white;
+  width: 384px;
+  margin: 2em;
+
+
+  opacity: 0.9;
+}
+
+.tweet-article article .content p {
+  position: absolute;
+  top: 6px;
+  left: 11px;
+  opacity: 10;
+}
+
+.tweet-article header {
+  background-color: #eee;
+  height: 58px;
+  position: relative;
+}
+
+
+.tweet-article header h3 {
+  bottom: 10px;
+  left: 60px;
+  position: absolute;
+}
+
+
+.tweet-article header span {
+  font-size: 11px;
+  font-weight: normal;
+  position: absolute;
+  top: 12px;
+  right: 9px;
+  float: right;
+}
+
+.tweet-article header img {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 5px;
+  left: 9px;
+  border-radius: 5px;
+}
+
+.tweet-article footer {
+  border-top: 1px solid #d2cece;
+  font-size: 11px;
+  padding: 6px;
+}
