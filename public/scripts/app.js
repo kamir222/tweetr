@@ -56,20 +56,24 @@
 
 
 function createTweetElement (data) {
-  let $tweetArticle = $("<article>").addClass("tweet-article")
-                      .append(
-                        $("<header>")
-                         .append($("<img>").attr("src", data.user.avatars.small))
-                         .append($("<span>").text(data.user.handle))
-                         .append($("<h3>").text(data.user.name))
-                             )
-                      .append(
-                        $("<div>").addClass("content")
-                          .append($("<p>").text(data.content.text))
-                             )
-                      .append(
-                        $("<footer>").text((new Date(1000*data.created_at)))
-                             );
+  let $tweetArticle =
+  `<article class="tweet-article">
+    <header>
+      <img src=${data.user.avatars.small}>
+      <span>${data.user.handle}</span>
+      <h3>${data.user.name}</h3>
+    </header>
+    <div class="content">
+    <p>${data.content.text}</p>
+    </div>
+    <footer>
+    <span>${new Date(1000*data.created_at)}</span>
+    <i class="fa fa-flag"></i>
+    <i class="fa fa-retweet"></i>
+    <i class="fa fa-heart"></i>
+    </footer>
+    </article>`
+
   return $tweetArticle;
 }
 

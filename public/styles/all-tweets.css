@@ -1,6 +1,8 @@
 .all-tweets {
   position: absolute;
   top: 150px;
+  background-color: white;
+  margin-top: 30px;
 }
 
 .tweet-article:hover {
@@ -10,27 +12,28 @@
 
 .tweet-article .content {
   height: 71px;
-  position: relative;
-
+  position: relative
 }
 
 .tweet-article {
   border: 1px solid #d2cece;
-  margin-bottom: 50px;
+  margin-top: 50px;
   border-radius: 5px;
   background-color: white;
   width: 384px;
   margin: 2em;
-
-
   opacity: 0.9;
 }
 
-.tweet-article article .content p {
+.tweet-article p {
   position: absolute;
+  margin-top: 4px;
+margin-bottom: 3px;
   top: 6px;
   left: 11px;
   opacity: 10;
+  word-wrap: break-word;
+  padding: 1px 10px;
 }
 
 .tweet-article header {
@@ -69,4 +72,9 @@
   border-top: 1px solid #d2cece;
   font-size: 11px;
   padding: 6px;
+}
+
+.tweet-article footer .fa {
+  float: right;
+  padding: 0px 2px;
 }
