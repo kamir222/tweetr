@@ -8,6 +8,11 @@ module.exports = function makeDataHelpers(db) {
   return {
 
     // Saves a tweet to `db`
+    //-------------
+    //INSTRUCTIONS:
+    //-------------
+    //Modify saveTweet to use Mongo
+    //(try Mongo's insertOne())
     saveTweet: function(newTweet, callback) {
       simulateDelay(() => {
         db.tweets.push(newTweet);
@@ -15,13 +20,25 @@ module.exports = function makeDataHelpers(db) {
       });
     },
 
+
     // Get all tweets in `db`, sorted by newest first
+    //-------------
+    //INSTRUCTIONS:
+    //-------------
+    //Modify getTweets to use Mongo
+    //(try Mongo's find() function)
+    // and you don't have to simulate the async delay anymore.
+    //since you're doing real async with Mongo
     getTweets: function(callback) {
-      simulateDelay(() => {
-        const sortNewestFirst = (a, b) => a.created_at - b.created_at;
-        callback(null, db.tweets.sort(sortNewestFirst));
+
+      console.log(db.collection("tweets"));
+
+      db.collection("tweets").find().toArray((err, tweets) => {
+        if (err) {
+          return callback(err);
+        }
+        callback(null, tweets);
       });
     }
-
-  };
+  }
 }
