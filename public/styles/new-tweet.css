@@ -3,6 +3,7 @@
   border-radius: 5px;
   background-color: #eee;
   width: 384px;
+  height: 147px;
   margin: 2em;
   position: absolute;
 }
@@ -29,9 +30,9 @@ textarea[placeholder] {
 
 input[value='Tweet'] {
   border: 1px solid #d2cece;
-  margin-top: 5px;
-  margin-bottom: 9px;
+  padding: 7px;
   background-color: white;
+  cursor: pointer;
 }
 
 form .counter {

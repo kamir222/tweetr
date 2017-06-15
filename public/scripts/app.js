@@ -53,6 +53,8 @@
 //   }
 // ];
 
+
+
 function createTweetElement (data) {
   let $tweetArticle = $("<article>").addClass("tweet-article")
                       .append(
@@ -66,7 +68,7 @@ function createTweetElement (data) {
                           .append($("<p>").text(data.content.text))
                              )
                       .append(
-                        $("<footer>").text(data.created_at)
+                        $("<footer>").text((new Date(1000*data.created_at)))
                              );
   return $tweetArticle;
 }
@@ -104,7 +106,6 @@ function loadTweets () {
 $(document).ready(function () {
 
   $(".composeBtn").on('click', function () {
-
   $(".new-tweet").toggle( "slow", function() {
      $( "textarea" ).focus();
   });
