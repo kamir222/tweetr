@@ -103,17 +103,28 @@ function loadTweets () {
     method: 'GET',
     success: function (response) {
       renderTweets(response.reverse());
+
+
+
     }
   });
 }
 
 $(document).ready(function () {
-
+  // toggle button animation
   $(".composeBtn").on('click', function () {
-  $(".new-tweet").toggle( "slow", function() {
-     $( "textarea" ).focus();
+    $(".new-tweet").toggle( "slow", function() {
+       $( "textarea" ).focus();
+     });
+   });
+
+  // hover affect for icons in tweets
+  $(".all-tweets").hover(function(){
+      $("footer .fa").css("display", "inline");
+      }, function(){
+      $("footer .fa").css("display", "none");
   });
-});
+
 
 
   $(".new-tweet form").on('submit', function (event) {
