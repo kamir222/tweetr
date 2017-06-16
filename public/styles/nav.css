@@ -32,6 +32,9 @@
   background-color: white;
   cursor: pointer;
 }
+#nav-bar .composeBtn .fa {
+  margin-right: 6px;
+}
 #nav-bar .composeBtn:hover {
   opacity: 1;
 }

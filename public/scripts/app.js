@@ -53,25 +53,10 @@ $(document).ready(function () {
 
   // toggle button animation
   $(".composeBtn").on('click', function () {
-
-    $(".new-tweet").toggle( "slow", function() {
-
+    $(".new-tweet").slideToggle( "slow", function() {
        $( "textarea" ).focus();
-
      });
-
-
    });
-
-  //  $(".composeBtn").on('click', function (event) {
-  //    if ($(".composeBtn").is(":visible")) {
-  //       $( ".all-tweets" ).css("top", "200px")
-  //      } else {
-  //        $( ".all-tweets" ).css("top", "-26px")
-  //     }
-  //   });
-
-
 
   // hover affect for icons in tweets
   $(".all-tweets").hover(function(){
