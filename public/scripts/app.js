@@ -3,20 +3,20 @@
 function createTweetElement (data) {
   let $tweetArticle =
   `<article class="tweet-article">
-    <header>
-      <img src=${data.user.avatars.small}>
-      <span>${data.user.handle}</span>
-      <h3>${data.user.name}</h3>
-    </header>
-    <div class="content">
-    <p>${data.content.text}</p>
-    </div>
-    <footer>
-    <span>${new Date(1000*data.created_at)}</span>
-    <i class="fa fa-flag"></i>
-    <i class="fa fa-retweet"></i>
-    <i class="fa fa-heart"></i>
-    </footer>
+      <header>
+        <img src=${data.user.avatars.small}>
+        <span>${data.user.handle}</span>
+        <h3>${data.user.name}</h3>
+      </header>
+      <div class="content">
+        <p>${data.content.text}</p>
+      </div>
+      <footer>
+        <span>${new Date(1000*data.created_at)}</span>
+        <i class="fa fa-flag"></i>
+        <i class="fa fa-retweet"></i>
+        <i class="fa fa-heart"></i>
+      </footer>
     </article>`
 
   return $tweetArticle;
