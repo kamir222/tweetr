@@ -1,6 +1,4 @@
 .all-tweets {
-  position: absolute;
-  top: 150px;
   background-color: white;
   margin-top: 30px;
 }
@@ -8,7 +6,6 @@
 .tweet-article:hover {
   opacity: 1;
 }
-
 
 .tweet-article .content {
   height: 71px;
@@ -28,12 +25,13 @@
 .tweet-article p {
   position: absolute;
   margin-top: 4px;
-margin-bottom: 3px;
+  margin-bottom: 3px;
   top: 6px;
   left: 11px;
   opacity: 10;
   word-wrap: break-word;
   padding: 1px 10px;
+  padding: 3px 1px;
 }
 
 .tweet-article header {
@@ -42,21 +40,21 @@ margin-bottom: 3px;
   position: relative;
 }
 
-
 .tweet-article header h3 {
   bottom: 10px;
   left: 60px;
   position: absolute;
 }
 
-
 .tweet-article header span {
   font-size: 11px;
   font-weight: normal;
-  position: absolute;
-  top: 12px;
+  /* position: relative; */
+  /* top: 203px; */
   right: 9px;
   float: right;
+  padding-top: 12px;
+  padding-right: 10px;
 }
 
 .tweet-article header img {
@@ -77,4 +75,5 @@ margin-bottom: 3px;
 .tweet-article footer .fa {
   float: right;
   padding: 0px 2px;
+  color: rgb(255, 139, 159);
 }

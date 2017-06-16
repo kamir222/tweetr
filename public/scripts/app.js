@@ -52,18 +52,26 @@ function loadTweets () {
 $(document).ready(function () {
 
   // toggle button animation
-  $(".composeBtn").on('click', function (event) {
+  $(".composeBtn").on('click', function () {
+
     $(".new-tweet").toggle( "slow", function() {
+
        $( "textarea" ).focus();
+
      });
+
 
    });
 
-  //  if ($(".composeBtn").is(":hidden")) {
-  //    $( ".all-tweets" ).css("top", "-26px")
-  //  } else {
-  //     $( ".all-tweets" ).css("top", "200px")
-  //  }
+  //  $(".composeBtn").on('click', function (event) {
+  //    if ($(".composeBtn").is(":visible")) {
+  //       $( ".all-tweets" ).css("top", "200px")
+  //      } else {
+  //        $( ".all-tweets" ).css("top", "-26px")
+  //     }
+  //   });
+
+
 
   // hover affect for icons in tweets
   $(".all-tweets").hover(function(){
@@ -71,8 +79,6 @@ $(document).ready(function () {
       }, function(){
       $("footer .fa").css("display", "none");
   });
-
-
 
   $(".new-tweet form").on('submit', function (event) {
     event.preventDefault();
@@ -88,6 +94,7 @@ $(document).ready(function () {
       alert('you\'ve exceeded character count!');
     } else {
       $('textarea').val('');
+
       //post request to the server
       $.ajax({
           url: '/tweets/',
